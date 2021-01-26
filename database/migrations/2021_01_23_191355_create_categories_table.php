@@ -16,7 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('slug'); //->unique() so mysql keep track for uniqueness
+            $table->string('slug')->unique(); //->unique() so mysql keep track for uniqueness
             $table->timestamps();
         });
     }
